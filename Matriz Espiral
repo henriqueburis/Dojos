@@ -1,0 +1,74 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/*
+ Matriz Espiral
+
+
+ Este problema foi utilizado em 148 Dojo(s).
+ Dado um número de colunas e um número de linhas, retornar uma matriz em espiral de fora para dentro no sentido horário.
+ Variação do problema: retorne a espiral no sentido anti-horário.
+ Este problema é mais fácil de ser compreendido através de exemplos:
+ Entrada: 3 4
+
+ Saída:
+
+ 1  2 3
+ 10 11 4
+ 9 12 5
+ 8  7 6
+
+ Entrada: 5 6
+
+ Saída:
+
+ 1  2  3  4  5
+ 18 19 20 21  6
+ 17 28 29 22  7
+ 16 27 30 23  8
+ 15 26 25 24  9
+ 14 13 12 11 10
+ */
+package matriz.espiral;
+
+/**
+ *
+ * @author luiz henrique buris
+ */
+public class MatrizEspiral {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int InputColuna = 3;
+        int InputLinha = 4;
+        int count = 0;
+        String novaMatriz = "";
+
+        int[][] matriz = new int[InputLinha][InputColuna];
+    
+
+        for (int i = 0; i < InputLinha; i++) {
+            for (int j = 0; j < InputColuna; ++j) {
+                matriz[i][j] = count = count + 1;
+            }
+        }
+
+        for (int i = 0; i < InputLinha; i++) {
+            for (int j = 0; j < InputColuna; ++j) {
+                novaMatriz += matriz[i][j] + " ";
+            }
+            novaMatriz += "\n";
+        }
+        System.out.println(novaMatriz);
+        
+        
+
+
+    }
+}
