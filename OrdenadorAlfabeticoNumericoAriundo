@@ -1,0 +1,54 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ordenadorletra;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author luiz.buris
+ */
+public class OrdenadorLetra {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+        char[] alfabeto = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'V', 'X', 'Z'};
+        ArrayList<String> entrada = new ArrayList<>();
+        ArrayList<String> organizada = new ArrayList<>();
+
+        entrada.add("Luiz Hnerique");
+        entrada.add("Zezão");
+        entrada.add("Elton");
+        entrada.add("Suelen");
+        entrada.add("Marcio");
+        entrada.add("Aurellienen");
+        entrada.add("Andressa");
+        entrada.add("Carlos");
+        entrada.add("9");
+        entrada.add("5");
+        entrada.add("3");
+
+        for (char c : alfabeto) {
+            System.out.println("---------" + c + "----------");
+            for (String input : entrada) {
+
+                if (input.charAt(0) == c) {
+                    System.out.println(input);
+                    organizada.add(input);
+                }
+            }
+
+        }
+        System.out.println("--------------------------------------------------------------");
+
+        for (String saida : organizada) {
+            System.out.println("Saida      " + saida);
+        }
+    }
+}
